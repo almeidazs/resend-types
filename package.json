@@ -1,0 +1,63 @@
+{
+	"version": "0.0.1",
+	"name": "resend-types",
+	"description": "TypeScript typings for the Resend API.",
+	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"sideEffects": false,
+	"license": "MIT",
+	"engines": {
+		"node": ">=18"
+	},
+	"packageManager": "bun@1.3.9",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		}
+	},
+	"files": [
+		"dist/**"
+	],
+	"scripts": {
+		"build": "bun run gen:version && tsc",
+		"prepublishOnly": "bun run build",
+		"gen:version": "bun run scripts/version.ts",
+		"lint": "biome check .",
+		"lint:fix": "biome check . --write",
+		"typecheck": "tsc --noEmit",
+		"test": "bun test",
+		"fmt": "bun run lint:fix"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.8",
+		"@types/bun": "latest",
+		"typescript": "^5.9.3"
+	},
+	"maintainers": [
+		{
+			"name": "Almeida",
+			"url": "https://github.com/almeidazs"
+		}
+	],
+	"keywords": [
+		"resend",
+		"email",
+		"api",
+		"types",
+		"typescript"
+	],
+	"publishConfig": {
+		"access": "public",
+		"provenance": true
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/almeidazs/resend-types.git"
+	},
+	"bugs": {
+		"url": "https://github.com/almeidazs/resend-types/issues"
+	},
+	"homepage": "https://github.com/almeidazs/resend-types#readme"
+}
