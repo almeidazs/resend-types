@@ -10,6 +10,7 @@ export * from './features/template';
 export * from './features/topic';
 export * from './features/webhook';
 export * from './rest';
+export * from './routes';
 
 export { version } from './version';
 
