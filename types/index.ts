@@ -9,6 +9,7 @@ export * from './features/segment';
 export * from './features/template';
 export * from './features/topic';
 export * from './features/webhook';
+export * from './rest';
 
 export { version } from './version';
 
